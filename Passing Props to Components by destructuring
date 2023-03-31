@@ -33,3 +33,4 @@ export default Header;
 -------------------------------------------------------------------------
 
 We can pass props by destructuring the props by providing the variables to the function.
+Here we use {  } bracket while declaring props.
