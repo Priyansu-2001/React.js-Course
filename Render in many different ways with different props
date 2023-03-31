@@ -1,0 +1,92 @@
+------------------   EXAMPLE - 1  ----------------------------
+--------------------   App.js  --------------------------------
+
+import React from "react";
+import Header from "./Components/Header";
+
+export default function App() {
+ 
+  return (
+    <div>
+      <Header
+        person={{ Name: "Priyansu", Age: 19, Mobile: 7690754643 }}
+        Group={"Bipros"}
+      ></Header>
+      <Header
+        person={{ Name: "Nirupa", Age: 21, Mobile: 76904566573 }}
+        Group={"TCS"}
+      ></Header>
+    </div>
+  );
+}
+
+--------------------------------------------------------------------
+
+------------------------   Header.js --------------------------------
+
+import React from "react";
+
+const Header = ({ person, Group }) => {
+  return (
+    <div>
+      <h3>
+        {person.Name} {person.Age}
+      </h3>
+      <h1>
+        {person.Name} {person.Age} {Group} {person.Mobile}
+      </h1>
+    </div>
+  );
+};
+export default Header;
+
+------------------------------------------------------------------------
+
+///////// ------------------------------------------------------ //////////
+
+output: 
+
+Priyansu 19
+Priyansu 19 Bipros 7690754643
+Nirupa 21
+Nirupa 21 TCS 76904566573
+
+
+-----------------------------  EXAMPLE - 2  -------------------------------
+-------------------------- App.js ----------------------------------------
+import React from "react";
+import Header from "./Components/Header";
+
+export default function App() {
+ 
+  return (
+    <div>
+      <Header
+        person={{ Name: "Priyansu", Age: 19, Mobile: 7690754643 }}
+        Group={"Bipros"}
+      ></Header>
+    </div>
+  );
+}
+
+--------------------------- Header.js ------------------------------
+
+import React from "react";
+
+const Header = ({ person, Group }) => {
+  return (
+    <div>
+      <h1>
+        {person.Name="Pritam"} {person.Age=19} {Group="Hindutva"} {person.Mobile= 933567890}
+      </h1>
+    </div>
+  );
+};
+export default Header;
+
+---------------------------------------------------------------------------------------
+
+////////// -------------- --------------------------------------------- ////////////////
+
+OUTPUT :
+Pritam 19 Hindutva 933567890
